@@ -6,7 +6,7 @@ layers, and multi-layer perceptrons.
 """
 
 import random
-from .core import Value
+from core import Value
 
 
 class Neuron:

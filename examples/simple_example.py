@@ -1,4 +1,9 @@
-from napagrad import Value, MLP
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+from core import Value
+from neural_network import MLP
 
 # Create a simple neural network: 2 inputs -> 4 hidden -> 1 output
 model = MLP([2, 4, 1])

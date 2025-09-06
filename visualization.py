@@ -6,7 +6,7 @@ created during neural network forward and backward passes.
 """
 
 from graphviz import Digraph
-from .core import Value
+from core import Value
 
 
 def trace_computational_graph(root):

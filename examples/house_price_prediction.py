@@ -1,4 +1,10 @@
-from napagrad import Value, MLP, draw_computational_graph
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+from core import Value
+from neural_network import MLP
+from visualization import draw_computational_graph
 
 print("🧠 Neural Network Example with Visualization")
 print("=" * 50)
