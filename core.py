@@ -67,8 +67,21 @@ class Value:
         return result
 
     def  __rmul__(self,other):
-        print('__rmul__')
         return self * other
+
+    def __truediv__(self, other):
+        """Division operation with automatic differentiation."""
+        other_value = other if isinstance(other, Value) else Value(other)
+        result = Value(
+            value=self.value / other_value.value,
+            children=(self, other_value),
+            operation="/"
+        )
+        return result
+     
+    def __neg__(self,other):
+        return self * -1
+        
 
     def relu(self):
         """Rectified Linear Unit activation function."""
