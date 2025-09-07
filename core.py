@@ -66,6 +66,10 @@ class Value:
         )
         return result
 
+    def  __rmul__(self,other):
+        print('__rmul__')
+        return self * other
+
     def relu(self):
         """Rectified Linear Unit activation function."""
         result = Value(
